@@ -1,0 +1,497 @@
+
+/* this implements the fonts that are gonna be used */
+@font-face {
+    font-family: megrin;
+    src: url(font/Megrim-Regular.ttf);
+  }
+
+  @font-face{
+      font-family: oswald;
+      src:url(font/Oswald-VariableFont_wght.ttf);
+  }
+
+  /* this is for the nav bar consistant through out and the background */
+header{
+
+    font-family: megrin;
+}
+li.current{
+    color: #b8bbbb;
+    text-shadow: 2px 2px 5px #d3e2e2;
+}
+
+/* positions logo */
+img.logo{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+/* background for the navbar */
+nav{
+    color: black;
+}
+
+/* the actual menu for the nav bar */
+ul{
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:20px;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-right: 100px;
+}
+
+/* this highlights the currently hovered item with a glow in the nav */
+a{
+    color: #b8bbbb;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #b8bbbb;
+    text-shadow: 2px 2px 5px #d3e2e2;
+}
+
+
+/* the background */
+body{
+    margin:0px;
+    padding:0px;
+    background-attachment: fixed;
+    background-image: url(images/BWM\ site\ background.png);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* start of the index page contents */
+h1{
+    font-family: megrin;
+    font-size: 100px;
+    color: #b8bbbb;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+p{
+
+    font-family: oswald;
+    margin:0px;
+    padding:0px;
+    font-size: 25px;
+    color: #b8bbbb;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+
+div.main{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right:0px;
+    width: 65%;
+
+}
+/* this is the text on the right side */
+div.side{
+    position: relative;
+    margin-top: 0px;
+    width: 20%;
+    margin-left: 75%;
+    margin-top: 5%;
+    padding:0;
+}
+/* this is the form for the email input for sign up */
+div.form{
+    margin-left:0px;
+}
+
+/* this is the video embed along with the text under it */
+div.gorillaz{
+    position: relative;
+    margin-left: -1px;
+    margin-top: -17.5%;
+
+}
+
+
+/* this is for the images on the right of the embed to give size and border */
+img.spotlight{
+    height: 300px;
+    width: 400px;
+    border:3px solid #b8bbbb;
+    border-radius: 4px;
+
+
+}
+
+/* this controls the background and heigt of the backing box for the images */
+div.panel{
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.562);
+    margin-left:45%;
+    margin-top:-40.4%;
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-left:10px;
+    padding-top:10px;
+    width: 420px;
+    height:935px;
+}
+
+/* this is the text under the embed */
+figcaption.fig{
+    width: 800px;
+    height: 50px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* below this is the start of the coming soon page */
+ /* this does the slideshow thing */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    stroke:black;
+    stroke-width: 2px;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  /* shimmys the slideshow box over a bit */
+  div.container{
+      margin-left: 5%;
+  }
+
+  /* sets the sizes of the images in the slideshow */
+  img.slideimage{
+    width: 1200px;
+    height: 675px;
+  }
+
+  /* this is the box with text on the right of the slideshow */
+  div.soonpanel{
+    width: 20%;
+    margin-left: 75%;
+    margin-top: -36.8%;
+    padding:0;
+}
+
+/* this is the box of text below the slideshow */
+div.belowsoon{
+  position: relative;
+  margin-top:21%;
+  margin-left:5%;
+  width: 1200px
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* this is the start of the contact us page */
+/* this the the intial intro text for the page */
+p.contactstart{
+  text-align: center;
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 30px;
+  width: 70%;
+}
+
+/* this is a list for the the opening times */
+ul.opentimes{
+  font-family: oswald;
+  color: #b8bbbb;
+  margin-top: 5%;
+}
+
+/* these two bits are for the "office building" of the company */
+div.baynes{
+  height: 900px;
+  width: 1200px;
+  margin-left: 8%;
+}
+
+figcaption.baynes{
+  font-size: 30px;
+  font-family: oswald;
+  color: #b8bbbb;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* this is the start of the links page */
+/* this is the intro heading of the links page */
+p.links{
+  text-align: center;
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 30px;
+  width: 70%;
+
+}
+div.linkstart{
+  margin:0px;
+  padding: 0px;
+}
+
+/* this is the logos for the different streaming sites */
+div.contactimages{
+  margin-left: 15%;
+  width:80%;
+  height: 50%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+/* this is the video player bit */
+div.videoplayer{
+  margin-top: 5%;
+}
+
+/* this is the text under the embed */
+figcaption.figvid{
+  width: 1100px;
+  height: 50px;
+}
+
+
+/* this is the scroll panel on the right for next up videos */
+div.nextup{
+  overflow:scroll;
+  overflow-x: hidden;
+  float: right;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.562);
+  margin-top:-40.45%;
+  margin-bottom: 0px;
+  margin-right: 2%;
+  padding-left:10px;
+  padding-top:10px;
+  width: 720px;
+  height:945px;
+}
+
+/* these are the thumbnails for the videos */
+img.nextvideo{
+
+    height: 400px;
+    width: 700px;
+    border:3px solid #b8bbbb;
+    border-radius: 4px;
+}
+
+/* turns the cursor into a pointer over thumbnail */
+img.nextvideo:hover{
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@media screen and (max-width: 480px) {
+
+
+  ul{
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:20px;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-right: 100px;
+}
+
+  h1{
+    font-family: megrin;
+    font-size: 100px;
+    color: #b8bbbb;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+p{
+
+    font-family: oswald;
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    color: #b8bbbb;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+
+div.main{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right:0px;
+    width: 70%;
+
+}
+/* this is the text on the right side */
+
+div.side{
+  position: relative;
+  margin-top: 0px;
+  width: 20%;
+  height: 220px;
+  margin-left: 75%;
+  margin-top: 5%;
+  padding:0;
+}
+/* this is the form for the email input for sign up */
+div.form{
+    margin-left:0px;
+}
+
+/* this is the video embed along with the text under it */
+div.gorillaz{
+    
+    margin-left: -7.5%;
+    
+
+}
+
+iframe.gor{
+  width: 300px;
+  height: 250px;
+}
+
+/* this is for the images on the right of the embed to give size and border */
+img.spotlight{
+    height: 230px;
+    width: 280px;
+    border:3px solid #b8bbbb;
+    border-radius: 4px;
+
+
+}
+
+/* this controls the background and heigt of the backing box for the images */
+div.panel{
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.562);
+    margin-left:2%;
+    margin-top:5%;
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-left:10px;
+    padding-top:10px;
+    width: 300px;
+    height:720px;
+}
+
+/* this is the text under the embed */
+figcaption.fig{
+    width: 300px;
+    height: 50px;
+}
+}
+
+input{
+  width:100%
+}

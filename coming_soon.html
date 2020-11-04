@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class ="logo" src="images/black water music logo.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="coming_soon.html">Coming Soon</a></li>
+                <li><a href="Links.html">Links</a></li>
+                <li><a href="Videos.html">Videos</a></li>
+                <li><a href="Contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1 style ="text-decoration: underline">coming soon </h1>
+    </div>
+
+    <div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+            <img class="slideimage" src="images/get jinxed.png">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+            <img  class="slideimage" src="images/Chester-Bennington.png">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+            <img class="slideimage" src="images/get lucky cover.png" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+            <img class="slideimage" src="images/Minutes-to-Midnight-Promo-linkin-park-52533_1000_808.jpg" >
+        </div>
+      
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption">new lines ups for October</p>
+        </div>
+      </div>
+
+
+      <script>
+          var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+      </script>
+
+      <div class="soonpanel">
+          <p>
+              aergaergaergjig Buccaneer gangway cog s panker bilge capstan marooned black spot belay gally parrel gun man-of-war trysail haul wind 
+              long clothes pressgang run a shot across the bow crimp Sea Legs hogshead port lanyard topgallant mizzenmast driver measured fer yer chains 
+              carouser yawl keelhaul jack Davy Jones' Locker boatswain tack parley avast nipperkin Privateer clipper lugsail
+          </p>
+      </div>
+
+      <div class="belowsoon">
+        <p>
+              Buccaneer gangway cog s panker bilge capstan marooned black spot belay gally parrel gun man-of-war trysail haul wind 
+              long clothes pressgang run a shot across the bow crimp Sea Legs hogshead port lanyard topgallant mizzenmast driver measured fer yer chains 
+              carouser yawl keelhaul jack Davy Jones' Locker boatswain tack parley avast nipperkin Privateer clipper lugsail
+        </p>
+      </div>
+</body>
+</html>
