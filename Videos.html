@@ -8,9 +8,9 @@
     <script src="video.js"></script>
 </head>
 
-<body>
+<body class="videopage">
     <header>
-        <img class ="logo" src="images/black water music logo.png">
+        <img class ="logo" src="images/black_water_music_logo.png" alt="BWM logo" title="BWM logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,10 +24,9 @@
 
     <div class="videoplayer">
         <figure>
-        <iframe id=frame src="https://www.youtube.com/embed/HyHNuVaZJ-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="feels good inc" height="700" width="1100"> </iframe>
+        <iframe id=frame src="https://www.youtube.com/embed/HyHNuVaZJ-k"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="feels good inc" > </iframe>
         <figcaption class="figvid">
             <p>
-                 aargjeanrgoiuerlgiuerbglaiurbglierkjfagbrlgoqwieghpaw;LGIHAOWEISGHALOEWUHRGA
                  Chandler draught salmagundi Brethren of the Coast gunwalls skysail swab cutlass list wench furl landlubber or just lubber dance 
                  the hempen jig Buccaneer gangway cog s panker bilge capstan marooned black spot belay gally parrel gun man-of-war trysail haul wind
                  long clothes pressgang run a shot across the bow crimp Sea Legs hogshead port lanyard topgallant mizzenmast driver measured fer yer chains carouser yawl
@@ -38,11 +37,11 @@
     </div>
 
     <div id="nextup" class="nextup" >
-        <img id="getlucky" class="nextvideo" src="images/get lucky cover.png">
-        <img id="jinx" class="nextvideo" src="images/get jinxed.png">
-        <img id="gorillaz" class="nextvideo" src="images/feels good inc.jpg">
-        <img id="polishcow" class="nextvideo" src="images/polishcow.jpg">
-        <img id="spinning"  class="nextvideo" src="images/spinning.jpg">
+        <img id="getlucky" class="nextvideo" alt="get lucky" title="get lucky" src="images/get_lucky_cover.png">
+        <img id="jinx" class="nextvideo" alt="get jinxed" title="get jinxed" src="images/get_jinxed.png">
+        <img id="gorillaz" class="nextvideo" alt="feels good inc" title="feels good inc" src="images/feels_good_inc.jpg">
+        <img id="polishcow" class="nextvideo" alt="polishcow" title="polishcow" src="images/polishcow.jpg">
+        <img id="spinning"  class="nextvideo" alt="spinning" title="spinning" src="images/spinning.jpg">
     </div>
 
     <script>
@@ -63,6 +62,43 @@ document.getElementById('polishcow').onclick = function () {
 document.getElementById('spinning').onclick = function () {
         document.getElementById('frame').src="https://www.youtube.com/embed/zecnwqXe850";
 }
+    </script>
+
+<script>
+    (function(window, document, undefined) {
+      "use strict";
+    
+      // List of Video Vendors embeds you want to support
+      var players = ['iframe[src*="youtube.com"]', 'iframe[src*="vimeo.com"]'];
+    
+      // Select videos
+      var fitVids = document.querySelectorAll(players.join(","));
+    
+      // If there are videos on the page...
+      if (fitVids.length) {
+        // Loop through videos
+        for (var i = 0; i < fitVids.length; i++) {
+          // Get Video Information
+          var fitVid = fitVids[i];
+          var width = fitVid.getAttribute("width");
+          var height = fitVid.getAttribute("height");
+          var aspectRatio = height / width;
+          var parentDiv = fitVid.parentNode;
+    
+          // Wrap it in a DIV
+          var div = document.createElement("div");
+          div.className = "fitVids-wrapper";
+          div.style.paddingBottom = aspectRatio * 100 + "%";
+          parentDiv.insertBefore(div, fitVid);
+          fitVid.remove();
+          div.appendChild(fitVid);
+    
+          // Clear height/width from fitVid
+          fitVid.removeAttribute("height");
+          fitVid.removeAttribute("width");
+        }
+      }
+    })(window, document);
     </script>
 </body>
 </html>
