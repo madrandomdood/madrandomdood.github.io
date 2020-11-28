@@ -67,8 +67,8 @@ body{
     background-attachment: fixed;
     background-image: url(images/BWM\ site\ background.png);
     display: grid;
-    grid-template-columns: 50% 25% 25%;
-    grid-template-rows:  15% 14% auto;
+    grid-template-columns: 50% 24% 26%;
+    grid-template-rows:  auto;
     grid-template-areas:
     "nav    nav     nav"
     "header header  aside"
@@ -99,8 +99,7 @@ figure{
 div.main{
   grid-area: header;
   padding-left:1%;
-  padding-right: 1%;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
 }
 
 /* this is the text on the right side */
@@ -108,12 +107,13 @@ div.side{
   grid-area: aside;
   padding-right:3%;
   padding-left: 3%;
+  
 }
 
 /* this is the video embed along with the text under it */
 div.gorillaz{
     grid-area:main;
-    padding-left: 1%;
+    padding: 2%;
 
 }
 
@@ -140,6 +140,7 @@ div.panel{
     padding-right: 15px;
     padding-left:10px;
     padding-top:10px;
+    margin-top: 3%;
     width: 100%;
     height:100%;
 }
@@ -181,15 +182,12 @@ figcaption.fig{
   /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0%;
+
   }
 
   /* Hide the images by default */
   .mySlides {
     display: none;
-    max-width: 100%;
     
   }
 
@@ -267,9 +265,9 @@ figcaption.fig{
 
   /* sets the sizes of the images in the slideshow */
   img.slideimage{
-   width: 100%;
-   height: 700px;
-   margin: 0%;
+   
+    width: 100%;
+    height: 100%;
   }
 
 
@@ -277,12 +275,12 @@ figcaption.fig{
   body.comingsoonpage{
 
     display: grid;
-    grid-template-columns: 33.3% 42% auto;
-    grid-template-rows:  10% 15% 62% ;
+    grid-template-columns: 33% 42% auto;
+    grid-template-rows:  10% 20% 60% auto;
     grid-template-areas:
     "nav    nav     nav"
-    ".      head    ."
-    "slide  slide       soonpanel"
+    ".    head    ."
+    "slide   slide       soonpanel"
     "belowsoon  belowsoon   soonpanel";
   
   }
@@ -299,6 +297,8 @@ figcaption.fig{
   div.container{
     grid-area:slide;
     width: 100%;
+    height: 70%;
+    padding-left: 1%;
   }
 
   /* this is the box with text on the right of the slideshow */
@@ -310,8 +310,8 @@ figcaption.fig{
 /* this is the box of text below the slideshow */
 div.belowsoon{
   grid-area:belowsoon;
-  margin-top: 1%;
-  margin-left: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
   width: 100%;
 }
 
@@ -382,22 +382,24 @@ div.map{
 
 body.link{
   display: grid;
-  grid-template-columns: 33.3% 33.3% ;
-  grid-template-rows:  15% 20% 20% auto;
+  grid-template-columns: 33.3% 33.3% 33.3% ;
+  grid-template-rows:  5% 5% 50%;
   grid-template-areas:
   "nav    nav     nav    nav"
   ".      linkstart   .   ."
-  "logos    logos  logos    logos";
+  "logos    logos  logos   .";
 }
 
+header{
+  grid-area:nav;
+  font-family: megrin;
+}
 
 p.links{
   
   text-align: center;
   font-size: 30px;
   
-  
-
 }
 div.linkstart{
   grid-area: linkstart;
@@ -408,14 +410,17 @@ div.linkstart{
 /* this is the logos for the different streaming sites */
 div.contactimages{
   grid-area:logos;
-  height: 50%;
-  justify-content: center;
-  margin-left:20%;
+  margin-left: 20%;
+}
 
+#soundcloud{
+
+height: 20%;
 }
 
 img.spotify{
   margin-left:150px;
+  height: 20%;
 }
 
 
@@ -424,12 +429,12 @@ img.spotify{
 
 body.videopage{
 display: grid;
-grid-template-columns: 60% 20% 20%;
-grid-template-rows:  15% 30% auto;
+grid-template-columns: 60% 20% 17.5% auto;
+grid-template-rows:  9% 30% 61%;
 grid-template-areas:
-"nav    nav     nav"
-"main   nextup  nextup"
-"main   nextup  nextup";
+"nav    nav     nav  nav"
+"main   nextup  nextup  ."
+"main   nextup  nextup  .";
 }
 
 /* this is the text under the embed */
@@ -453,18 +458,17 @@ div.nextup{
   float: right;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.562);
-  margin-right: 2%;
   padding-left:10px;
   padding-top:10px;
-  width: 720px;
-  height:945px;
+  max-width: 100%;
+  height:43%;
 }
 
 /* these are the thumbnails for the videos */
 img.nextvideo{
 
-    height: 400px;
-    width: 700px;
+    height: 50%;
+    width: 100%;
     border:3px solid #b8bbbb;
     border-radius: 4px;
 }
@@ -475,8 +479,8 @@ img.nextvideo:hover{
 }
 
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 
 
@@ -489,7 +493,7 @@ img.nextvideo:hover{
     background-image: url(images/BWM\ site\ background.png);
     display: grid;
     grid-template-columns: 50% 25% 25%;
-    grid-template-rows:  15% 21% auto;
+    grid-template-rows:  auto;
     grid-template-areas:
     "nav    nav     nav"
     "header header  aside"
@@ -500,8 +504,11 @@ img.spotlight{
   width: 100%;
   border:3px solid #b8bbbb;
   border-radius: 4px;
+}
 
-
+header{
+  grid-area:nav;
+  font-family: megrin;
 }
 
 /* this controls the background and heigt of the backing box for the images */
@@ -518,6 +525,124 @@ div.panel{
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body.link{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  "nav    nav         nav    "
+  ".      linkstart   .   "
+  "logos  logos       logos   ";
+}
+
+p.links{
+  
+  text-align: center;
+  font-size: 30px;
+  
+}
+div.linkstart{
+  grid-area: linkstart;
+  margin:0px;
+  padding-top: 5%;
+}
+
+#soundcloud{
+
+  height: 10%;
+  }
+  
+  img.spotify{
+    margin-left:200px;
+    height: 10%;
+  }
+  
+  div.contactimages{
+    grid-area:logos;
+    margin-left: 7%;
+  }
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+    body.videopage{
+  display: grid;
+  grid-template-columns: 60% 20% 17.5% 5%;
+  grid-template-rows:  10% 30% auto;
+  grid-template-areas:
+  "nav    nav     nav  nav"
+  "main   nextup  nextup  nextup"
+  "main   nextup  nextup nextup";
+  }
+    
+    /* this is the text under the embed */
+    figcaption.figvid{
+      width: 100%;
+      height: 50px;
+    }
+    
+    figure{
+      padding:0px;
+      margin-left:1%;
+      margin-right:1%;
+      margin-top:0px;
+    }
+    
+    /* this is the scroll panel on the right for next up videos */
+    div.nextup{
+      grid-area:nextup;
+      overflow:scroll;
+      overflow-x: hidden;
+      float: right;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.562);
+      padding-left:10px;
+      padding-top:10px;
+      /* margin-right: 5%; */
+      width: 100%;
+      max-height:100%;
+    }
+    
+    /* these are the thumbnails for the videos */
+    img.nextvideo{
+    
+        height: 50%;
+        width: 100%;
+        margin-right: 5%;
+        border:3px solid #b8bbbb;
+        border-radius: 4px;
+    }
+    
+    /* turns the cursor into a pointer over thumbnail */
+    img.nextvideo:hover{
+      cursor: pointer;
+    }
+
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+    body.comingsoonpage{
+
+      display: grid;
+      grid-template-columns: 33% 42% auto;
+      grid-template-rows:  10% 20% 50% auto;
+      grid-template-areas:
+      "nav    nav     nav"
+      ".    head    ."
+      "slide   slide       soonpanel"
+      "belowsoon  belowsoon   soonpanel";
+    
+    }
+
+
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 @media screen and (max-width: 1024px) {
   body{
@@ -562,10 +687,129 @@ div.panel{
   width: 100%;
   height:100%;
 }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body.link{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  "nav    nav         nav    "
+  ".      linkstart   .   "
+  "logos  logos       logos   ";
+}
+
+p.links{
+  
+  text-align: center;
+  font-size: 30px;
+  
+}
+div.linkstart{
+  grid-area: linkstart;
+  margin:0px;
+  padding-top: 5%;
+}
+
+
+#apple{
+  height: 6%;  
+}
+
+#google{
+height: 6%;
+
+}
+
+
+#soundcloud{
+
+  height: 6%;
+  }
+  
+  img.spotify{
+    margin-left:100px;
+    height: 6%;
+  }
+  
+  div.contactimages{
+    grid-area:logos;
+    margin-left: 13%;
+  }
+
+  li.current{
+    color: #b8bbbb;
+    text-shadow: 2px 2px 5px #d3e2e2;
+}
+
+/* positions logo */
+img.logo{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+/* background for the navbar */
+nav{
+    color: black;
+}
+
+/* the actual menu for the nav bar */
+ul{
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:20px;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-right: 100px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+body.contact{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  15% 15% 30% 40% 55% ;
+  grid-template-areas:
+  "nav    nav     nav"
+  "contactstart     contactstart     contactstart"
+  "time   time    time"
+  "map    map     map"
+  "baynes baynes  .";
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body.comingsoonpage{
+
+  display: grid;
+  grid-template-columns: 33% 42% auto;
+  grid-template-rows:  10% 25% 40% auto;
+  grid-template-areas:
+  "nav    nav     nav"
+  ".    head    ."
+  "slide   slide       soonpanel"
+  "belowsoon  belowsoon   soonpanel";
+
+}
+
+
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 @media screen and (max-width: 768px) {
   body{
@@ -576,7 +820,7 @@ div.panel{
     background-image: url(images/BWM\ site\ background.png);
     display: grid;
     grid-template-columns: 50% 25% 25%;
-    grid-template-rows:  28% 23% auto;
+    grid-template-rows:  30% 23% auto;
     grid-template-areas:
     "nav    nav     nav"
     "header header  aside"
@@ -587,11 +831,25 @@ p{
   font-family: oswald;
   margin:0px;
   padding:0px;
-  font-size: 20px;
+  font-size: 15px;
   color: #b8bbbb;
   background-color: rgba(0, 0, 0, 0.562);
 }
 
+
+ul{
+  background-color: rgba(0, 0, 0, 0.616);
+  text-align: center;
+  font-size: 40px;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom:20px;
+  list-style-type: none;
+}
+li{
+  display: inline-block;
+  margin-right: 10%;
+}
 img.spotlight{
   height: 30%;
   width: 100%;
@@ -614,6 +872,172 @@ div.panel{
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+body.link{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  "nav    nav         nav    "
+  ".      linkstart   .   "
+  "logos  logos       logos   ";
+}
+
+p.links{
+  
+  text-align: center;
+  font-size: 25px;
+  
+}
+div.linkstart{
+  grid-area: linkstart;
+  margin:0px;
+  padding-top: 5%;
+}
+
+
+#apple{
+  height: 5%;  
+}
+
+#google{
+height: 5%;
+
+}
+
+
+#soundcloud{
+
+  height: 5%;
+  }
+  
+  img.spotify{
+    margin-left:100px;
+    height: 5%;
+  }
+  
+  div.contactimages{
+    grid-area:logos;
+    margin-left: 5%;
+  }
+
+  li.current{
+    color: #b8bbbb;
+    text-shadow: 2px 2px 5px #d3e2e2;
+}
+
+/* positions logo */
+img.logo{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+/* background for the navbar */
+nav{
+    color: black;
+}
+
+/* the actual menu for the nav bar */
+ul{
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:20px;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-right: 100px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+body.contact{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  20% 15% 35% 27% auto ;
+  grid-template-areas:
+  "nav    nav     nav"
+  "contactstart     contactstart     contactstart"
+  "time   time    time"
+  "map    map     map"
+  "baynes baynes  .";
+}
+
+ul.opentimes{
+  font-family: oswald;
+  color: #b8bbbb;
+  font-size: 260%;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body.videopage{
+  display: grid;
+  grid-template-columns: 60% 20% 17.5% auto;
+  grid-template-rows:  10% 18% auto;
+  grid-template-areas:
+  "nav    nav     nav  nav"
+  "main   main  main  ."
+  "nextup   nextup  nextup  .";
+  }
+
+div.videoplayer{
+  grid-area: main;
+  margin-left: 1%;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body.comingsoonpage{
+
+  display: grid;
+  grid-template-columns: 33% 42% auto;
+  grid-template-rows:  35% 16% auto;
+  grid-template-areas:
+  "nav    nav     nav"
+  ".    head    ."
+  "slide   slide       soonpanel"
+  "belowsoon  belowsoon   soonpanel";
+
+}
+
+div.h1{
+  grid-area: head;
+  font-family: megrin;
+  padding-left: 5%;
+  margin: 0px;
+  font-size: 1em;
+  color: #b8bbbb;
+}
+
+div.soonpanel{
+  grid-area:soonpanel;
+  padding-left:2%;
+  
+}
+
+/* this is the box of text below the slideshow */
+div.belowsoon{
+grid-area:belowsoon;
+padding-top: 1%;
+padding-left: 1%;
+width: 100%;
+}
+
+
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
 
 @media screen and (max-width: 425px) {
   body{
@@ -624,7 +1048,7 @@ div.panel{
     background-image: url(images/BWM\ site\ background.png);
     display: grid;
     grid-template-columns: 100% ;
-    grid-template-rows:  24% 11% 20% auto;
+    grid-template-rows:  32% auto;
     grid-template-areas:
     "nav"
     "header"
@@ -686,34 +1110,103 @@ div.panel{
   width: 100%;
   height:100%;
 }
-}
-}
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
-
-
-
-body.comingsoonpage{
-
+body.link{
   display: grid;
-  grid-template-columns: 33.3% 32% auto;
-  grid-template-rows:  10% 15% 62% ;
+  grid-template-columns: 115%;
+  grid-template-rows:  auto;
   grid-template-areas:
-  "nav    nav     nav"
-  ".      head    ."
-  "slide  .       soonpanel"
-  "belowsoon  belowsoon   soonpanel";
-
+  "nav"
+  "linkstart"
+  "logos";
 }
+
+p.links{
+  
+  text-align: center;
+  font-size: 25px;
+  
+}
+div.linkstart{
+  grid-area: linkstart;
+  margin:0px;
+  padding-top: 5%;
+}
+
+
+#apple{
+  height: 7%; 
+  margin-left: 10% 
+}
+
+#google{
+height: 5%;
+margin-left: -5%;
+}
+
+
+#soundcloud{
+
+  height: 7%;
+  margin-left: 12%;
+  }
+  
+  img.spotify{
+    height: 7%;
+    margin-left: 25%;
+  }
+  
+  div.contactimages{
+    grid-area:logos;
+    justify-content: left;
+    margin: 0px;
+  }
+
+  li.current{
+    color: #b8bbbb;
+    text-shadow: 2px 2px 5px #d3e2e2;
+}
+
+/* positions logo */
+img.logo{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+/* background for the navbar */
+nav{
+    color: black;
+}
+
+/* the actual menu for the nav bar */
+ul{
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:20px;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-right: 100px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 body.contact{
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-template-rows:  15% 10% 20% 40% 55% ;
+  grid-template-rows:   auto ;
   grid-template-areas:
   "nav    nav     nav"
   "contactstart     contactstart     contactstart"
@@ -722,26 +1215,66 @@ body.contact{
   "baynes baynes  .";
 }
 
+ul.opentimes{
+  font-family: oswald;
+  color: #b8bbbb;
+  font-size: 180%;
+}
 
-
-body.link{
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+body.videopage{
   display: grid;
-  grid-template-columns: 33.3% 33.3% ;
-  grid-template-rows:  15% 20% 20% auto;
+  grid-template-columns: 60% 20% 17.5% auto;
+  grid-template-rows:  30% 22% auto;
   grid-template-areas:
-  "nav    nav     nav"
-  ".      linkstart      ."
-  "logos    logos  logos";
+  "nav    nav     nav  nav"
+  "main   main  main  ."
+  "nextup   nextup  nextup  .";
+  }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  body.comingsoonpage{
+
+    display: grid;
+    grid-template-columns: 33% 42% auto;
+    grid-template-rows:   auto;
+    grid-template-areas:
+    "nav    nav     nav"
+    ".    head    ."
+    "slide   slide       slide"
+    "belowsoon  belowsoon   belowsoon";
+  
+  }
+  
+  div.h1{
+    grid-area: head;
+    font-family: megrin;
+    padding-left: 5%;
+    margin: 0px;
+    font-size: 1em;
+    color: #b8bbbb;
+  }
+  
+  div.soonpanel{
+    grid-area:soonpanel;
+    padding-left:2%;
+    display: none;
+    
+  }
+  
+  /* this is the box of text below the slideshow */
+  div.belowsoon{
+  grid-area:belowsoon;
+  padding-top: 1%;
+  padding-left: 1%;
+  width: 100%;
+  }
+  
+
+
 }
 
 
-  body.videopage{
-    display: grid;
-    grid-template-columns: 60% 20% 20%;
-    grid-template-rows:  15% 30% auto;
-    grid-template-areas:
-    "nav    nav     nav"
-    "main   nextup  nextup"
-    "main   nextup  nextup";
-    }
-  }
